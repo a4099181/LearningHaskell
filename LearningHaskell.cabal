@@ -1,0 +1,19 @@
+name:                LearningHaskell
+version:             0.1.0.0
+synopsis:            Self-learning functional programming with Haskell.
+description:         Please see README.md
+homepage:            http://github.com/a4099181/LearningHaskell#readme
+license:             MIT
+license-file:        LICENSE
+author:              seb!
+maintainer:          sebi@sebi.one.pl
+copyright:           2016 seb!
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable LearningHaskell
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
