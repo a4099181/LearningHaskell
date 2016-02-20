@@ -1,5 +1,6 @@
 module Main where
 
+import Happstack.Server (nullConf, simpleHTTP, toResponse, ok)
+
 main :: IO ()
-main = do
-  putStrLn "hello world"
+main = simpleHTTP nullConf $ ok "Hello, World!"
