@@ -1,0 +1,2 @@
+# LearningHaskell
+Self-learning Haskell.
