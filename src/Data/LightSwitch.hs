@@ -7,12 +7,17 @@ module Data.LightSwitch (
 
 ) where
 
+import Control.Monad.State
+
 data LightSwitch      =  SwitchClosed | SwitchOpened 
-    deriving (Eq, Show)
+    deriving ( Eq, Show )
 
-getDefaultLightSwitch :: LightSwitch
-getDefaultLightSwitch =       SwitchClosed
+getDefaultLightSwitch :: State LightSwitch ()
+getDefaultLightSwitch =  do put SwitchClosed
 
-switch                :: LightSwitch -> LightSwitch
-switch SwitchClosed   =       SwitchOpened
-switch SwitchOpened   =       SwitchClosed
+switch :: State LightSwitch ()
+switch                =  do 
+                           lightSwitch <- get
+                           case lightSwitch of
+                               SwitchClosed -> put SwitchOpened
+                               SwitchOpened -> put SwitchClosed
