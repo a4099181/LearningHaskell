@@ -10,8 +10,9 @@ Simple and pretty stupid, extremely not useful, software for fun and learn.
   * [Activities](#uml-activities)
   * [Statecharts](#uml-statecharts)
 * [Development environment (made from scratch)](#dev-env)
-  * [First need commands](#basic)
+  * [First need commands](#dev-cmds)
 * [Test environment](#test-env)
+  * [First need commands](#test-cmds)
 * [Runtime environment (soon)](#run-env)
 * [Knowledge source](#knowledge)
 
@@ -23,7 +24,7 @@ main | **self-learning Haskell** |||
  | monads | as much as possible ||
 secondary|well designed software|UML charts||
  | well documented software |||
- | testable code |||
+ | testable code |[Hspec]|:white_check_mark:|
  | design-patterns everywhere | state ||
  |  | event sourcing ||
  |  | CQRS (maybe) ||
@@ -182,7 +183,8 @@ secondary|well designed software|UML charts||
       git clone https://github.com/godlygeek/tabular
     ```
 
-#### <a id=basic />First need commands
+#### <a id=dev-cmds />First need commands
+
 ```shell
 $ cabal install --only-dependencies # It installs all expected requirements.
 $ cabal build                       # It builds project to folder `dist` as output folder
@@ -191,7 +193,18 @@ $ cabal run                         # Easy way to run the code. It builds projec
 
 ### Test environment <a id=test-env></a>
 
-* **[HSpec]**
+* Testing framework
+  * **[Hspec]** 
+
+    Recommended source-code tree supported nicely by [Hspec] can be found [here: hspec-discover](http://hspec.github.io/hspec-discover.html). The link describes very useful solution to automagically discover specs with only one-time edited `Spec.hs` file.
+
+#### <a id=test-cmds />First need commands
+
+```shell
+$ cabal configure --enable-tests       # It's self-explanatory.
+$ cabal test                           # It runs all tests but output is a little too much rich.
+$ runhaskell -isrc -itest test/Spec.hs # Long command but it gives very nice output.
+```
 
 ### <a id=knowledge></a> Knowledge sources
 
@@ -200,7 +213,7 @@ $ cabal run                         # Easy way to run the code. It builds projec
 | [Learn You a Haskell for Great Good!](http://learnyouahaskell.com/chapters)
 | [Practical Haskell](http://seanhess.github.io/2015/08/04/practical-haskell-getting-started.html)
 | [State monad](https://wiki.haskell.org/State_Monad)
-| [HSpec](http://hspec.github.io)
+| [Hspec](http://hspec.github.io)
 | [UML](https://sourcemaking.com/uml)
 |
 
@@ -211,7 +224,7 @@ $ cabal run                         # Easy way to run the code. It builds projec
 [ghc]: https://www.haskell.org/ghc/
 [git]: http://git-scm.com
 [hdevtools]: https://github.com/bitc/hdevtools
-[HSpec]: http://hspec.github.io
+[Hspec]: http://hspec.github.io
 [pathogen.vim]: http://github.com/tpope/vim-pathogen/
 [stack]: http://www.haskellstack.org/
 [syntastic]: http://github.com/scrooloose/syntastic/
