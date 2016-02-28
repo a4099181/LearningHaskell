@@ -6,9 +6,8 @@ data LightSwitch = SwitchClosed
                  | SwitchOpened
   deriving (Eq, Show)
 
-getDefaultLightSwitch :: State LightSwitch ()
-getDefaultLightSwitch = do
-  put SwitchClosed
+getDefaultLightSwitch :: LightSwitch
+getDefaultLightSwitch = SwitchClosed
 
 switch :: State LightSwitch ()
 switch = do

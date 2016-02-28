@@ -7,13 +7,12 @@ import           Control.Monad.State
 spec :: Spec
 spec = do
   describe "getDefaultLightSwitch" $ do
-    it "always returns closed switch" $ do
-      execState getDefaultLightSwitch SwitchClosed `shouldBe` SwitchClosed
-      execState getDefaultLightSwitch SwitchOpened `shouldBe` SwitchClosed
+    it "returns closed switch" $ do
+      getDefaultLightSwitch `shouldBe` SwitchClosed
 
   describe "when defaultLightSwitch switches" $ do
     it "returns opened switch" $ do
-      execState switch (execState getDefaultLightSwitch SwitchOpened) `shouldBe` SwitchOpened
+      execState switch getDefaultLightSwitch `shouldBe` SwitchOpened
 
   describe "when closed switch switches" $ do
     it "returns opened switch" $ do

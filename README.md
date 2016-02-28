@@ -35,7 +35,7 @@ secondary|well designed software|UML charts||
  |  | CQRS (maybe) ||
  |  | circuit breakers ||
  | "single-click" deploy |||
- | multiple front-ends | console ||
+ | multiple front-ends | console |:white_check_mark:|
  |  | standalone UI ||
  |  | WebUI/html5 ||
  | browser-in animations with html5/canvas |||
