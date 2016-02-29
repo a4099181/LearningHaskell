@@ -5,10 +5,7 @@ Simple and pretty stupid, extremely not useful, software for fun and learn.
 ## Content
 
 * [Goals](#goals)
-* [Project](#uml)
-  * [Use cases](#uml-use_cases)
-  * [Activities](#uml-activities)
-  * [Statecharts](#uml-statecharts)
+* [Project](#uml) - UML diagrams
 * [Development environment (made from scratch)](#dev-env)
   * [Operationg system](#dev-env-os)
   * [Haskell platform](#dev-env-hs)
@@ -19,7 +16,7 @@ Simple and pretty stupid, extremely not useful, software for fun and learn.
   * [First need commands](#test-cmds)
 * [Runtime environment (soon)](#run-env)
 * [Haskell code quality](#code-quality)
-* [Knowledge source](#knowledge)
+* [Knowledge sources](#knowledge)
 
 ### <a id=goals></a> Goals
 
@@ -28,16 +25,17 @@ Simple and pretty stupid, extremely not useful, software for fun and learn.
 main | **self-learning Haskell** |||
  | monads | as much as possible ||
 secondary|well designed software|UML charts||
- | well documented software |||
+ | self-documented code |||
  | testable code |[Hspec]|:white_check_mark:|
  | design-patterns everywhere | state |:white_check_mark:|
  |  | event sourcing ||
  |  | CQRS (maybe) ||
  |  | circuit breakers ||
- | "single-click" deploy |||
+ | event-driven application |||
  | multiple front-ends | console |:white_check_mark:|
  |  | standalone UI ||
  |  | WebUI/html5 ||
+ | "single-click" deploy |||
  | browser-in animations with html5/canvas |||
  | self-learning TypeScript | probably ||
  | self-learning Markdown ||:white_check_mark:|
@@ -45,15 +43,13 @@ secondary|well designed software|UML charts||
 
 ### Project<sup>([draw.io])</sup><a id=uml></a>
 
-#### Use cases<a id=uml-use_cases></a>
-
 ![Use cases][uml-use_cases]
 
-#### Activities<a id=uml-activities></a>
+![Domain][uml-class-domain]
+
+![Main activity][uml-activity-main]
 
 ![Light switch activity][uml-activity-lswitch]
-
-#### Statecharts<a id=uml-statecharts></a>
 
 ![Light switch states][uml-statechart-lswitch]
 
@@ -297,7 +293,8 @@ secondary|well designed software|UML charts||
 | [Practical Haskell](http://seanhess.github.io/2015/08/04/practical-haskell-getting-started.html)
 | [State monad](https://wiki.haskell.org/State_Monad)
 | [Hspec](http://hspec.github.io)
-| [UML](https://sourcemaking.com/uml)
+| [UML at sourcemaking.com](https://sourcemaking.com/uml)
+| [UML diagrams](http://www.uml-diagrams.org)
 |
 
 [cabal]: https://www.haskell.org/cabal/
@@ -321,10 +318,12 @@ secondary|well designed software|UML charts||
 [vim]: http://www.vim.org/
 [vim-hdevtools]: http://github.com/bitc/vim-hdevtools/
 
-[uml-use_cases]: https://iesmkg.bn1302.livefilestore.com/y3m6gvj-uMl0AfZnvu22om8GPbcb2Tz9JjI6KHRg_aEOLIQLg_5yxQ3hlg4ercdUzZYm1lsSs1MflGP6e0D-jthhA177tA4tgAdtql8J5GiNYdkUN_LsC19o1Q9xNW6RhD00oHfs6wylNvQNKpKndAw1w?width=450&height=283&cropmode=none
-[uml-activity-lswitch]: https://ies7na.bn1302.livefilestore.com/y3m96kLeEycPR92qOoc-4J_bzB3cFZV1dktJKM9JjrSHYv-vrpl1_sdTuXTzOlHdKlM4zjsDsKhC5yHIa0Na4GTWOH2EEJFkA5OP5_WOpIlSZQ7kYUUIEU6DHqTQipxNaxpJiQ0eMOTmYJBYn1IQG_91A?width=443&height=333&cropmode=none
-[uml-statechart-lswitch]: https://ievd7w.bn1302.livefilestore.com/y3mKE5WJGoeOEW0cGXVNFCGw4R242ZTJK5JIiKRKbrim5qpyA4onOCHCMEXIbYPKKDFoANAB1qvd928t1P3XG2FUzevy7CHPFoDnPxRCXKtFh0vKgtGDFR8WCvJNN69y8xlqTLNeRfgvXfjmB7KBL7-zA?width=366&height=199&cropmode=none
-[ssh-development]: https://ieunbg.bn1302.livefilestore.com/y3mcMPx81cFc4mNY5OFK5fqqT_Hfx4keKKpvxxvNaqTBUwIjMmQjNQOp2fmCU6Uom6Rfk56oepv04SSV62q96xLLRYUMolFqjwpNR-meVEE8fDW0vt1Lw80rKbcHGC_p5Aj_MeV0_TzKTV3K26Or1KNLbxBTrZu_tThFCXnYNGhbFU?width=1301&height=784&cropmode=none
+[uml-use_cases]: https://iesmkg.bn1302.livefilestore.com/y3m6gvj-uMl0AfZnvu22om8GPbcb2Tz9JjI6KHRg_aEOLIQLg_5yxQ3hlg4ercdUzZYm1lsSs1MflGP6e0D-jthhA177tA4tgAdtql8J5GiNYdkUN_LsC19o1Q9xNW6RhD00oHfs6wylNvQNKpKndAw1w
+[uml-class-domain]: https://ftkwra.bn1302.livefilestore.com/y3mmeSJFWOjfgI69tQ817jc--CY8jjuiVFLrW5x1-FVugjfDqyntCPuL8GxOGq6xfmanxwSoWz4bzsyJ0WuooEPi0914unl6dMDc0Fqm4cSAuZXTGueQ880pZ7nDm4XdjIh87hal_NG3DsBOW51JgoG4w
+[uml-activity-main]: https://ftkpzq.bn1302.livefilestore.com/y3m4IjV9ClkzDEPWoRz5T5w8xZG4kKKG8GGm9W4myB8Goq93xoCyjNboqbbLpumdqHesYoTKR93Z_8d41Yvis76qPIttMrFjqw1eyXQ5sdcacPssLSmCxqXKX-Bf5oRvhgw0MOXj0L86AkzXFlj29Os8g
+[uml-activity-lswitch]: https://ietjwg.bn1302.livefilestore.com/y3m0iczsHjEwtmQZepzQfqCPTVVwMe8-WMEXKoRDqRizlQDmYnjkGZpVzVpeQqVqvliB7EqqiXOhlJ1w3oRUYKoCRrerH1P1btyOHaCgiOXOKZgNdaufUX6eYqiH1BSFLDfq6Bn9aSiiSDFVGBAD77xOw
+[uml-statechart-lswitch]: https://ievd7w.bn1302.livefilestore.com/y3mXCwvzU7eKwFHq6ppUMbtmj9RUZm_Z8b0WQAWnrqKPmKpe485KzNdeqeusQTNdgreliUYngWukOdnZiOuYpoT1NJWezxqHP1AgqlKTYDdOzQBVJE9KugEjGPc-7r3zNhR4RE8ZXsKmGVnyGwZiL0_xA
+[ssh-development]:https://ietcew.bn1302.livefilestore.com/y3m9OoRBn1jY2-YiKV0ppqIUbkkmbM7CqqDqTgJsHxH7wm4Fp3m4RNrDV07H_K0COh_G3XhVPuxTs9FgBam2lXdsHT6A9MDC5rwDkxUX0OjHwzGJkgOG6kZRTDPRwNCxLHIXhHFmPkCG8ncyDTTJrvWDpawflmHZ3huB8BEkkyPA00
 
 [draw.io]: http://www.draw.io/ "Drawings are made on-line with draw.io."
 [emoji]: http://www.emoji-cheat-sheet.com "Emoji (emoticons/pictograph) supported by Github."
