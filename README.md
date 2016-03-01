@@ -6,6 +6,7 @@ Simple and pretty stupid, extremely not useful, software for fun and learn.
 
 * [Goals](#goals)
 * [Project](#uml) - UML diagrams
+  * [Documentation](#proj-doc) 
 * [Development environment (made from scratch)](#dev-env)
   * [Operationg system](#dev-env-os)
   * [Haskell platform](#dev-env-hs)
@@ -25,7 +26,8 @@ Simple and pretty stupid, extremely not useful, software for fun and learn.
 main | **self-learning Haskell** |||
  | monads | as much as possible ||
 secondary|well designed software|UML charts||
- | self-documented code |||
+ | maximally self-documented code |||
+ | documentation | [haddock] |:white_check_mark:|
  | testable code |[Hspec]|:white_check_mark:|
  | design-patterns everywhere | state |:white_check_mark:|
  |  | event sourcing ||
@@ -52,6 +54,10 @@ secondary|well designed software|UML charts||
 ![Light switch activity][uml-activity-lswitch]
 
 ![Light switch states][uml-statechart-lswitch]
+
+#### <a id=proj-doc></a>Documentation
+
+  * [haddock] documentation for this project is available as [project site].
 
 ### Development environment (made from scratch) <a id=dev-env ></a>
 
@@ -305,11 +311,13 @@ secondary|well designed software|UML charts||
 [git]: http://git-scm.com
 [good style rules]: https://wiki.haskell.org/Category:Style
 [Programming guidelines]: https://wiki.haskell.org/Programming_guidelines
+[haddock]: https://www.haskell.org/haddock/
 [hdevtools]: https://github.com/bitc/hdevtools
 [hindent]: https://github.com/chrisdone/hindent
 [Hspec]: http://hspec.github.io
 [inotifywait]: https://github.com/rvoicilas/inotify-tools/wiki
 [pathogen.vim]: http://github.com/tpope/vim-pathogen/
+[project site]: http://a4099181.github.io/LearningHaskell/
 [scan]: http://hackage.haskell.org/package/scan
 [stack]: http://www.haskellstack.org/
 [syntastic]: http://github.com/scrooloose/syntastic/
