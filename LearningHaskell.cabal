@@ -1,7 +1,7 @@
 name                       : LearningHaskell
 version                    : 0.1.0.0
 synopsis                   : Self-learning functional programming with Haskell.
-description                : Please see README.md
+description                : http://github.com/a4099181/LearningHaskell#readme
 homepage                   : http://github.com/a4099181/LearningHaskell#readme
 license                    : MIT
 license-file               : LICENSE
@@ -12,8 +12,13 @@ category                   : Web
 build-type                 : Simple
 cabal-version              : >=1.10
 
+source-repository head
+    type                   : git
+    location               : git://github.com/LearningHaskell.git
+
 executable LearningHaskell-console
     default-language       : Haskell2010
+    ghc-options            : -Wall
     hs-source-dirs         : src
     main-is                : Console.hs
     build-depends          : base >= 4.7 && < 5
@@ -21,6 +26,7 @@ executable LearningHaskell-console
 
 executable LearningHaskell
     default-language       : Haskell2010
+    ghc-options            : -Wall
     hs-source-dirs         : src
     main-is                : Main.hs
     build-depends          : base >= 4.7 && < 5
@@ -28,6 +34,7 @@ executable LearningHaskell
 
 library
     default-language       : Haskell2010
+    ghc-options            : -Wall
     hs-source-dirs         : src
     exposed-modules        : Data.Domain
                            , Data.Domain.Command
@@ -38,6 +45,7 @@ library
 
 test-suite spec
     default-language       : Haskell2010
+    ghc-options            : -Wall
     hs-source-dirs         : test
     main-is                : Spec.hs
     type                   : exitcode-stdio-1.0
