@@ -5,7 +5,8 @@ Simple and pretty stupid, extremely not useful, software for fun and learn.
 ## Content
 
 * [Goals](#goals)
-* [Project](#uml) - UML diagrams
+* [Project](#project)
+  * [Application model](#proj-uml)
   * [Documentation](#proj-doc) 
 * [Development environment (made from scratch)](#dev-env)
   * [Operationg system](#dev-env-os)
@@ -27,13 +28,14 @@ main | **self-learning Haskell** |||
  | monads | as much as possible ||
 secondary|well designed software|UML charts||
  | maximally self-documented code |||
- | documentation | [haddock] |:white_check_mark:|
+ | [documentation][project site] | [haddock] |:white_check_mark:|
  | testable code |[Hspec]|:white_check_mark:|
  | design-patterns everywhere | state |:white_check_mark:|
  |  | event sourcing ||
  |  | CQRS (maybe) ||
  |  | circuit breakers ||
  | event-driven application |||
+ | localizable application |||
  | multiple front-ends | console |:white_check_mark:|
  |  | standalone UI ||
  |  | WebUI/html5 ||
@@ -43,17 +45,11 @@ secondary|well designed software|UML charts||
  | self-learning Markdown ||:white_check_mark:|
  | and maybe many more but later...|||
 
-### Project<sup>([draw.io])</sup><a id=uml></a>
+### <a id=project></a>Project
 
-![Use cases][uml-use_cases]
+#### <a id=proj-uml></a>Application model
 
-![Domain][uml-class-domain]
-
-![Main activity][uml-activity-main]
-
-![Light switch activity][uml-activity-lswitch]
-
-![Light switch states][uml-statechart-lswitch]
+  * This projects tries to be modelled using  [UML charts] powered by [draw.io].
 
 #### <a id=proj-doc></a>Documentation
 
@@ -247,6 +243,7 @@ secondary|well designed software|UML charts||
 #### <a id=dev-cmds />First need commands
 
   ```shell
+  $ cabal init                            # It initializes empty project structure.
   $ cabal install --only-dependencies     # It installs all expected requirements.
   $ cabal build                           # It builds project to folder `dist` as output folder
   $ cabal run                             # Easy way to run the code. It builds project and runs the result
@@ -273,6 +270,7 @@ secondary|well designed software|UML charts||
 
 ### <a id=code-quality />Haskell code quality
 
+  * [Structure of a Haskell project]
   * Haskell [Programming guidelines]
   * Code quality is important, so it must be stylish. Follow the [good style rules].
   * **[scan]** checks the format of your haskell source code regarding: comments, white spaces and line breaks.
@@ -310,6 +308,7 @@ secondary|well designed software|UML charts||
 [ghc]: https://www.haskell.org/ghc/
 [git]: http://git-scm.com
 [good style rules]: https://wiki.haskell.org/Category:Style
+[Structure of a Haskell project]: https://wiki.haskell.org/Structure_of_a_Haskell_project
 [Programming guidelines]: https://wiki.haskell.org/Programming_guidelines
 [haddock]: https://www.haskell.org/haddock/
 [hdevtools]: https://github.com/bitc/hdevtools
@@ -322,15 +321,11 @@ secondary|well designed software|UML charts||
 [stack]: http://www.haskellstack.org/
 [syntastic]: http://github.com/scrooloose/syntastic/
 [tabular]: https://github.com/godlygeek/tabular
+[UML charts]: https://onedrive.live.com/redir?resid=FA1A560880C11689!689&authkey=!AGdgg1Uj5X-RvjY&ithint=folder%2cpng
 [tmux]: https://tmux.github.io
 [vim]: http://www.vim.org/
 [vim-hdevtools]: http://github.com/bitc/vim-hdevtools/
 
-[uml-use_cases]: https://iesmkg.bn1302.livefilestore.com/y3m6gvj-uMl0AfZnvu22om8GPbcb2Tz9JjI6KHRg_aEOLIQLg_5yxQ3hlg4ercdUzZYm1lsSs1MflGP6e0D-jthhA177tA4tgAdtql8J5GiNYdkUN_LsC19o1Q9xNW6RhD00oHfs6wylNvQNKpKndAw1w
-[uml-class-domain]: https://ftkwra.bn1302.livefilestore.com/y3mmeSJFWOjfgI69tQ817jc--CY8jjuiVFLrW5x1-FVugjfDqyntCPuL8GxOGq6xfmanxwSoWz4bzsyJ0WuooEPi0914unl6dMDc0Fqm4cSAuZXTGueQ880pZ7nDm4XdjIh87hal_NG3DsBOW51JgoG4w
-[uml-activity-main]: https://ftkpzq.bn1302.livefilestore.com/y3m4IjV9ClkzDEPWoRz5T5w8xZG4kKKG8GGm9W4myB8Goq93xoCyjNboqbbLpumdqHesYoTKR93Z_8d41Yvis76qPIttMrFjqw1eyXQ5sdcacPssLSmCxqXKX-Bf5oRvhgw0MOXj0L86AkzXFlj29Os8g
-[uml-activity-lswitch]: https://ietjwg.bn1302.livefilestore.com/y3m0iczsHjEwtmQZepzQfqCPTVVwMe8-WMEXKoRDqRizlQDmYnjkGZpVzVpeQqVqvliB7EqqiXOhlJ1w3oRUYKoCRrerH1P1btyOHaCgiOXOKZgNdaufUX6eYqiH1BSFLDfq6Bn9aSiiSDFVGBAD77xOw
-[uml-statechart-lswitch]: https://ievd7w.bn1302.livefilestore.com/y3mXCwvzU7eKwFHq6ppUMbtmj9RUZm_Z8b0WQAWnrqKPmKpe485KzNdeqeusQTNdgreliUYngWukOdnZiOuYpoT1NJWezxqHP1AgqlKTYDdOzQBVJE9KugEjGPc-7r3zNhR4RE8ZXsKmGVnyGwZiL0_xA
 [ssh-development]:https://ietcew.bn1302.livefilestore.com/y3m9OoRBn1jY2-YiKV0ppqIUbkkmbM7CqqDqTgJsHxH7wm4Fp3m4RNrDV07H_K0COh_G3XhVPuxTs9FgBam2lXdsHT6A9MDC5rwDkxUX0OjHwzGJkgOG6kZRTDPRwNCxLHIXhHFmPkCG8ncyDTTJrvWDpawflmHZ3huB8BEkkyPA00
 
 [draw.io]: http://www.draw.io/ "Drawings are made on-line with draw.io."
